@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Expense Categories</title>
+	<link rel = "stylesheet" type = "text/css" href = "myStyle.css" />
+</head>
+
+<body background="download.jpg" style="background-size: 100%">
+
+  
+<center>
+<div id ="login" style="background-color: white; width: 500px;align-content: center;background-blend-mode: lighten;">
+<h1 >ADD YOUR EXPENSE</h1>
+</div>
+
+</center>
+<center>
+<div class="Categories" id = "Categories">
+<button type="button" class="button" onclick="onEnter()">Food</button>
+<button type="button" class="button" onclick="onEnter()">Education</button>
+<button type="button" class="button" onclick="onEnter()">Transportation</button>
+<button type="button" class="button" onclick="billCat()">Bills</button>
+<button type="button" class="button" onclick="onEnter()">Loans</button>
+<button type="button" class="button" onclick="onEnter()">Rent</button>
+<button type="button" class="button" onclick="onEnter()">Tax</button>
+<button type="button" class="button" onclick="onEnter()">Pet</button>
+<button type="button" class="button" onclick="onEnter()">Health</button>
+<button type="button" class="button" onclick="onEnter()">Entertainment</button>
+<button type="button" class="button" onclick="onEnter()">Kids</button>
+<button type="button" class="button" onclick="misCat()">Shopping</button>
+</div>
+<br>
+<br>
+<div class="Bill_cat" id="BillCat" style="display: none;">
+	<button type="button" class="button" onclick="onEnter()">Electricity</button>
+	<button type="button" class="button" onclick="onEnter()">Water</button>
+</div>
+<div class="misCat" id="misCat" style="display: none;">
+	<button type="button" class="button" onclick="onEnter()">Clothing</button>
+	<button type="button" class="button" onclick="onEnter()">Beauty</button>
+	<button type="button" class="button" onclick="onEnter()">Gift</button>
+	<button type="button" class="button" onclick="onEnter()">Book</button>
+	<button type="button" class="button" onclick="onEnter()">Electronics</button>
+	<button type="button" class="button" onclick="onEnter()">Grocery</button>
+</div>
+<br>
+<br>x	
+<div class="onEnter" id="onEnter" style="display: none;">
+	<fieldset style="width:450px;background-color: white;">
+    <p>Enter Amount</p>
+	<input type="Username" name="username" placeholder="Amount">
+  <input type="date" name="date" placeholder="Date">
+  <br>
+  <br>
+   <input type="submit" value="Submit" onclick="submitted()">
+    <br>
+</fieldset>
+</div>
+<br>
+<br>
+<div class="alert" id = "alert" style="display: none;">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Success!</strong> 
+</div>
+
+</center>
+<script type="text/javascript">
+	function billCat() {
+		document.getElementById("BillCat").style.display = "";
+	}
+	function misCat() {
+		document.getElementById("misCat").style.display = "";
+	}
+	function onEnter() {
+		document.getElementById("onEnter").style.display="";
+	}
+	function submitted() {
+		document.getElementById("onEnter").style.display="none;";
+		document.getElementById("alert").style.display="";
+
+	}
+</script>
+</body>
+</html>

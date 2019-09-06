@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Income categories</title>
+	<link rel = "stylesheet" type = "text/css" href = "myStyle.css" />
+
+</head>
+
+<body background="download.jpg" style="background-size: 100%">
+
+  
+<center>
+<div id ="income" style="background-color: white; width: 500px;align-content: center;background-blend-mode: lighten;">
+<h1 >ADD YOUR INCOME</h1>
+</div>
+
+</center>
+<center>
+<div class="Categories" id = "Categories">
+<button type="button" class="button" onclick="onEnter()">Rent</button>
+<button type="button" class="button"  onclick="onEnter()">Salary</button>
+<button type="button" class="button" onclick="onEnter()">Bills</button>
+
+<button type="button" class="button" onclick="onEnter()">Awards</button>
+<button type="button" class="button"  onclick="onEnter()">Sale</button>
+<button type="button" class="button" onclick="onEnter()">Coupon</button>
+<button type="button" class="button" onclick="onEnter()">Investment</button>
+<button type="button" class="button" onclick="onEnter()">Others</button>
+
+</div>
+<br>
+<br>
+<div class="onEnter" id="onEnter" style="display:none;">
+	<fieldset style="width:450px;background-color: white;">
+    <p>Enter Amount</p>
+	<input type="Username" name="username" placeholder="Amount">
+  <input type="date" name="date" placeholder="Date">
+  <br>
+  <br>
+   <input type="submit" value="Submit" onclick="submitted()">
+    <br>
+</fieldset>
+</div>
+<br>
+<br>
+<div class="alert" id = "alert" style="display: none;">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Success!</strong> 
+</div>
+
+</center>
+<script type="text/javascript">
+	function onEnter()
+	{
+		document.getElementById("onEnter").style.display="";
+	}
+	function submitted() {
+		document.getElementById("onEnter").style.display="none;";
+		document.getElementById("alert").style.display="";
+
+	}
+</script>
+</body>
+</html>
